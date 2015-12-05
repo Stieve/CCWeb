@@ -32,8 +32,8 @@ var ChatClient = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <h1>My Chat</h1>
+      <div className="chat-container">
+        <h1>React - chat client</h1>
         <MessageList messages={this.state.messages}/>
         <MessageInput onNewMessage={this._addNewMessage}/>
       </div>
@@ -50,7 +50,15 @@ var ChatClient = React.createClass({
     messages.push({body: text});
     this.setState({messages: messages});
     */
-    chatActions.sendMessage(text);
+
+    var message = {body: text,
+     sender:{
+       name:'Stieve',
+       imageUrl: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAP8AAAAJGQ3Nzc0ZGQ3LTM2MzktNDA5MS05YzZkLWRjYzdhM2M2MGVmNA.jpg'
+      }
+    };
+
+    chatActions.sendMessage(message);
   }
 });
 

@@ -1,0 +1,97 @@
+div.chat-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+ol.message-list{
+    border-top: 1px solid lightgray;
+    background:  #f2f2f2;
+    width: 600px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    list-style-type: none;
+}
+
+.chat-container .message-composer{
+    width: 600px;
+    height: 45px;
+    border-top: 1px solid lightgray
+}
+
+.message-composer textarea{
+    resize: none;
+    font-family: 'Muli', 'Helvetica Neue', helvetica, arial;
+    width: 584px;
+    margin: 5px;
+}
+
+.message-list li{
+    display: flex;
+    padding: 5px;
+}
+
+ol li{
+    color: black;
+    font-size: 1.4em;
+    font-family: 'Muli', 'Helvetica Neue', helvetica, arial;
+}
+
+ol li.self{
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+ol li.other{
+    justify-content: flex-start;
+}
+
+.avatar{
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.avatar img{
+    width: 100%;
+    display: block;
+}
+
+.message{
+    padding: 5px;
+    min-height: 30px;
+    max-width: 490px;
+    background: white;
+}
+
+.other .message{
+    margin-right: 50px;
+}
+
+.self .message{
+    margin-left: 50px;
+}
+
+.self .avatar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 5px solid white;
+  border-right-color: transparent;
+  border-top-color: transparent;
+}
+
+.other .avatar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 5px solid white;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
