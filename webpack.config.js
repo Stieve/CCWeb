@@ -12,6 +12,7 @@ var webpackConfig = {
     'jsx': './Jsx/main',
     'first-react': './FirstReact/main',
     'forms': './Forms/main',
+	'lifecycle': './Lifecycle/main',
     'vendor': ['react', 'react-dom']
   },
   output: {

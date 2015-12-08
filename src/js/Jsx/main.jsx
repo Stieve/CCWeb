@@ -12,6 +12,13 @@ ReactDOM.render(<div id='mainDiv'>
 					<div className="ccDiv">
 						<h3 className= 'title'>CC IoT - Internet of Things @ M$</h3>
 						<p>The Internet of Things does not need to be complicated ...</p>
-					</div>					
+					</div>
+					<div>
+						<label htmlfor="not_present">not present</label>
+						<input name="present" id="not_present" type="radio" disabled/>
+						
+						<label htmlfor="present">present</label>							
+						<input name="present" id="present" type="radio" disabled={false} />					
+					</div>										
 				</div>, 
 				document.getElementById('react-container'));
