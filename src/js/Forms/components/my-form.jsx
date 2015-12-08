@@ -1,6 +1,7 @@
 "use strict";
 
 var React = require('react');
+var ReactDOM = require('react-dom');
 var PropTypes = React.PropTypes;
 
 var MyForm = React.createClass({
@@ -11,7 +12,7 @@ var MyForm = React.createClass({
 
   handleSubmit: function(event){
     event.preventDefault();
-    var name = React.findDOMNode(this.refs.name);
+    var name = ReactDOM.findDOMNode(this.refs.name);
     // Do something with the value
     name.value = '';
   },

@@ -31,7 +31,7 @@ ol.message-list{
 
 .message-list li{
     display: flex;
-    padding: 5px;
+    padding: 10px;
 }
 
 ol li{
